@@ -24,5 +24,13 @@
     const num2 = 3;
     document.getElementById("demo-2").innerText = num1 + num2;
 </script>
+<h1>BigInt</h1>
+<p>BigInt is a format for storing big integers beyond what can normally be handled by typical double-precision 64-bit floating point numbers.</p>
+<p>This should be an example of a BigInt</p>
+<p id="demo-3"></p>
+<script>
+    bigNumber = BigInt(9007199254740992)
+    document.getElementById("demo-3").innerText = bigNumber + "(this is basically 1 greater than the biggest safe integer you can use with regular javascript numbers)"
+</script>
 </body>
 </html>
