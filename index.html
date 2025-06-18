@@ -9,16 +9,16 @@
 <h1>String</h1>
 <p>Strings are basically just a series of text characters. They're denoted with single or double quotes. As in, 'potato' or "potato"</p>
 <p>The following text should return a string:</p>
-<p id="demo-1"></p>
+<h2 id="demo-1"></h2>
 <script>
     const text = "potato";
-    document.getElementByID("demo-1").innerText = text;
+    document.getElementById("demo-1").innerText = text;
 </script>
 <h1>Number</h1>
 <p>Javascript numbers are stored in double-precision (64-bit floating point) format. In practice this means it has 15-16 decimal digits of precision</p>
 <p>You can do math with Javascript numbers using operators</p>
 <p>The following is some math I've done with Javascript operators</p>
-<p id="demo-2"></p>
+<h2 id="demo-2"></h2>
 <script>
     const num1 = 5;
     const num2 = 3;
@@ -27,7 +27,7 @@
 <h1>BigInt</h1>
 <p>BigInt is a format for storing big integers beyond what can normally be handled by typical double-precision 64-bit floating point numbers.</p>
 <p>This should be an example of a BigInt</p>
-<p id="demo-3"></p>
+<h2 id="demo-3"></h2>
 <script>
     bigNumber = BigInt(9007199254740992)
     document.getElementById("demo-3").innerText = bigNumber + "(this is basically 1 greater than the biggest safe integer you can use with regular javascript numbers)"
