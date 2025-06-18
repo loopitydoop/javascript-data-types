@@ -37,7 +37,8 @@
 </script>
 
 <h1>Boolean</h1>
-<p>Either TRUE or FALSE. I think you mostly use this value when you do comparisons and check for conditions - which will result in either a TRUE or FALSE value.</p>
+<p>Boolean values are either true or false. Not like, the string "true" or "false". The values are just true or false.</p>
+<p>I think you mostly use this value when you do comparisons and check for conditions - which will result in either a TRUE or FALSE value.</p>
 <p>The following should be a little comparison that results in a boolean value being output. Is 3 < 8?</p>
 <h2 id="demo-4"></h2>
 <script>
@@ -71,5 +72,45 @@
     // this is a test to see if document.getElementById().innerText would display a null value as "null", or an empty field.
     document.getElementById("demo-6").innerText = null
 </script>
+<h2>Haha, this is not a null value. Turns out if there's no value... there's nothing to display!</h2>
 </body>
+
+<h1>Symbol</h1>
+<p>bruh the definition baffles me. Basically what I understand is that you use this Symbol() constructor that creates a unique value</p>
+<p>e.g. Symbol("foo") === Symbol("foo") // returns false</p>
+<p>I read that this is good for "adding unique property keys to an object that won't collide with other keys any other code might add to that object", but I have no idea what that means yet.</p>
+
+<h1>Object</h1>
+<p>JavaScript objects are written with curly braces { }.</p>
+<p>Object properties are written as name:value pairs, separated by commas.</p>
+<p>Basically it seems like you can create a thing, and assign it different properties.</p>
+<p>Here's an example of what a coffee object might look like:</p>
+<p>const coffee = {countryOfOrigin:"Brazil", variety:"Yellow Bourbon", roastLevel:"medium-dark"}</p>
+<p>and this is an example of calling on its properties:</p>
+<p id="demo-7"></p>
+<p id="demo-8"></p>
+<p id="demo-9"></p>
+<script>
+    const coffee = {countryOfOrigin:"Brazil", variety:"Yellow Bourbon", roastLevel:"medium-dark"}
+    document.getElementById("demo-7").innerText = coffee.countryOfOrigin
+    document.getElementById("demo-8").innerText = coffee.variety
+    document.getElementById("demo-9").innerText = coffee.roastLevel
+</script>
+
+    <h2>Arrays</h2>
+    <p>Arrays are special objects. They are basically ordered lists of values where each value is accessible by its numerical index</p>
+    <p>Arrays are represented by square brackets, with the items within separated by columns. Here's what an array looks like:</p>
+    <p>fruits = ["apples", "pears", "mangoes"]</p>
+    <p>So fruits[0] would be "apples"</p>
+
+    <h2>Dates</h2>
+    <p>JavaScript Date objects represent a single moment in time in a platform-independent format. Date objects encapsulate an integral number that represents milliseconds since the midnight at the beginning of January 1, 1970, UTC (the epoch).</p>
+    <p>This is an example of using a Date() constructor with multiple arguments to display an arbitrary time (I wonder what timezone this is going to come out as, actually. Apparently it should be in local time, but like, my local time? my website host's local time? Or the viewer's local time?)</p>
+    <h3 id="demo-10"></h3>
+    <script>
+        document.getElementById("demo-10").innerText = Date(2025,6,18,22,59,0,11)
+    </script>
+
+<h1>Concluding Words</h1>
+<p>That's it for now, I guess. Hope this works.</p>
 </html>
