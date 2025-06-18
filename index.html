@@ -6,6 +6,7 @@
 </head>
 <body>
 <p>hi there, this is just a little project where I try to display all the Javascript data types</p>
+
 <h1>String</h1>
 <p>Strings are basically just a series of text characters. They're denoted with single or double quotes. As in, 'potato' or "potato"</p>
 <p>The following text should return a string:</p>
@@ -14,6 +15,7 @@
     const text = "potato";
     document.getElementById("demo-1").innerText = text;
 </script>
+
 <h1>Number</h1>
 <p>Javascript numbers are stored in double-precision (64-bit floating point) format. In practice this means it has 15-16 decimal digits of precision</p>
 <p>You can do math with Javascript numbers using operators</p>
@@ -24,13 +26,50 @@
     const num2 = 3;
     document.getElementById("demo-2").innerText = num1 + num2;
 </script>
+
 <h1>BigInt</h1>
 <p>BigInt is a format for storing big integers beyond what can normally be handled by typical double-precision 64-bit floating point numbers.</p>
 <p>This should be an example of a BigInt</p>
 <h2 id="demo-3"></h2>
 <script>
-    bigNumber = BigInt(9007199254740992)
-    document.getElementById("demo-3").innerText = bigNumber + "(this is basically 1 greater than the biggest safe integer you can use with regular javascript numbers)"
+    bigNumber = BigInt(9007199254740992);
+    document.getElementById("demo-3").innerText = bigNumber + " " + "(this is basically 1 greater than the biggest safe integer you can use with regular javascript numbers)";
+</script>
+
+<h1>Boolean</h1>
+<p>Either TRUE or FALSE. I think you mostly use this value when you do comparisons and check for conditions - which will result in either a TRUE or FALSE value.</p>
+<p>The following should be a little comparison that results in a boolean value being output. Is 3 < 8?</p>
+<h2 id="demo-4"></h2>
+<script>
+    isThreeLessThanEight = (3 < 8)
+    document.getElementById("demo-4").innerText = isThreeLessThanEight
+</script>
+
+<h1>Undefined</h1>
+<p>A variable with no value has a value of undefined. The data type is also undefined.</p>
+<p>undefined is not to be confused with (1) null, or (2) an empty string (which has a value of "" and a type of "string")</p>
+<p>The following should display a variable with a value of undefined</p>
+<h2 id="demo-5"></h2>
+<script>
+    let undefinedVariable
+    document.getElementById("demo-5").innerText = undefinedVariable
+</script>
+
+<h1>Null</h1>
+<p>null and undefined both represent the absence of a value, but null represents the intentional absence of a value, whereas undefined denotes that a variable has been declared, but not assigned a value yet (or the variable has not been declared at all!).</p>
+<p>an example of how a null value could come about is if you're using the .match method on a string with some Regular Expressions (regex), and the string doesn't match any of the regex criteria.</p>
+<p>here's an example of that which should display a null value</p>
+<script>
+    function getVowels(str) {
+        const m = str.match(/[aeiou]/gi);
+        return m;
+    }
+    getVowels("why")
+</script>
+<h2 id="demo-6"></h2>
+<script>
+    // this is a test to see if document.getElementById().innerText would display a null value as "null", or an empty field.
+    document.getElementById("demo-6").innerText = null
 </script>
 </body>
 </html>
