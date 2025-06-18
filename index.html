@@ -60,20 +60,32 @@
 <p>null and undefined both represent the absence of a value, but null represents the intentional absence of a value, whereas undefined denotes that a variable has been declared, but not assigned a value yet (or the variable has not been declared at all!).</p>
 <p>an example of how a null value could come about is if you're using the .match method on a string with some Regular Expressions (regex), and the string doesn't match any of the regex criteria.</p>
 <p>here's an example of that which should display a null value</p>
-<script>
-    function getVowels(str) {
-        const m = str.match(/[aeiou]/gi);
-        return m;
-    }
-    getVowels("why")
-</script>
-<h2 id="demo-6"></h2>
-<script>
-    // this is a test to see if document.getElementById().innerText would display a null value as "null", or an empty field.
-    document.getElementById("demo-6").innerText = null
-</script>
-<h2>Haha, this is not a null value. Turns out if there's no value... there's nothing to display!</h2>
-</body>
+
+    <h2>Example 1</h2>
+    <h2 id="demo-6a"></h2>
+    <script>
+        function getVowels(str) {
+            const m = str.match(/[aeiou]/gi);
+            return m;
+        }
+        document.getElementById("demo-6a").innerText = getVowels("why")
+    </script>
+
+    <h2>Example 2</h2>
+    <h2 id="demo-6b"></h2>
+    <script>
+        // this is a test to see if document.getElementById().innerText would display a null value as "null", or an empty field.
+        document.getElementById("demo-6b").innerText = null
+    </script>
+
+    <h2>Example 3</h2>
+    <h2 id="demo-6c"></h2>
+    <script>
+        let nullVariable = null
+        document.getElementById("demo-6c").innerText = nullVariable
+    </script>
+
+    <h2>Haha, this is not a null value. Turns out if there's no value... there's nothing to display!</h2>
 
 <h1>Symbol</h1>
 <p>bruh the definition baffles me. Basically what I understand is that you use this Symbol() constructor that creates a unique value</p>
@@ -110,7 +122,10 @@
     <script>
         document.getElementById("demo-10").innerText = Date(2025,6,18,22,59,0,11)
     </script>
+    <p>yo that's crazy it writes everything out in a nice human-readable text format with the day of the week, timezone, and everything!</p>
 
 <h1>Concluding Words</h1>
 <p>That's it for now, I guess. Hope this works.</p>
+
+</body>
 </html>
